@@ -43,19 +43,19 @@ export class MapContainer extends Component {
 		return (
 			<div className="container">
 				<Header altitude={this.state.altitude} latitude={this.state.latitude} longitude={this.state.longitude} />
-				<div>
-					<Map
-						google={this.props.google}
-						zoom={2}
-						style={mapStyles}
-						initialCenter={{
-							lat: 1.22392,
-							lng: 36.8665
-						}}
-					>
-						<Marker position={{ lat: this.state.latitude, lng: this.state.longitude }} />
-					</Map>
-				</div>
+
+				<Map
+					google={this.props.google}
+					zoom={2}
+					style={mapStyles}
+					initialCenter={{
+						lat: 1.22392,
+						lng: 36.8665
+					}}
+				>
+					<Marker position={{ lat: this.state.latitude, lng: this.state.longitude }} />
+				</Map>
+
 				<Footer />
 			</div>
 		);
