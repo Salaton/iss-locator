@@ -23,8 +23,8 @@ export class MapContainer extends Component {
 
 	componentDidMount() {
 		this._isMounted = true;
-		//fetching data from the API after every 60 seconds
-		this.timerID = setInterval(() => this.fetchingData(), 60000);
+		//fetching data from the API after every 15 seconds
+		this.timerID = setInterval(() => this.fetchingData(), 15000);
 	}
 	componentWillUnmount() {
 		this._isMounted = false;
